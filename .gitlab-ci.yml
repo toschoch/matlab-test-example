@@ -1,0 +1,3 @@
+cookiecutter:
+	before_script: docker build -t cookiecutter ./docker/cookiecutter/.
+	script:	docker run --rm -it cookiecutter --help

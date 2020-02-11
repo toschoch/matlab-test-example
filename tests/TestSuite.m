@@ -4,12 +4,12 @@ classdef TestSuite < matlab.unittest.TestCase
     
     methods (Test)
         function testRealSolution(testCase)
-            actSolution = myfunc(1,-3);
+            actSolution = library.myfunc(1,-3);
             expSolution = [2,1];
             testCase.verifyEqual(actSolution,expSolution);
         end
         function testImaginarySolution(testCase)
-            actSolution = myfunc(1,2);
+            actSolution = library.myfunc(1,2);
             expSolution = [-1+3i, -1-3i];
             testCase.verifyEqual(actSolution,expSolution);
         end
